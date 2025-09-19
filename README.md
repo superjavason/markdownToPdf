@@ -12,9 +12,6 @@ Markdown Preview + PDF (Monorepo)
 pnpm i
 pnpm -C packages/renderer build
 
-
-
-
 pnpm -C apps/web dev
 ```
 

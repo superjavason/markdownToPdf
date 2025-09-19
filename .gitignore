@@ -3,3 +3,5 @@
 /apps/server/node_modules
 /apps/web/node_modules
 /packages/renderer/node_modules
+/apps/web/dist
+/apps/server/dist
