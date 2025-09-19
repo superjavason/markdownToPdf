@@ -8,7 +8,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "pnpm -C packages/renderer build && pnpm -C apps/web build",
+    "build": "pnpm -C packages/renderer build && pnpm -C apps/server build && pnpm -C apps/web build",
     "dev": "pnpm -r --stream dev",
     "lint": "echo 'no linter configured'",
     "start": "pnpm -C apps/server start",
