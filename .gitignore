@@ -21,3 +21,4 @@ packages/renderer/dist/
 # Temporary files
 /tmp/
 *.tmp
+.vercel
