@@ -1,7 +1,23 @@
-/node_modules
-/node_modules
-/apps/server/node_modules
-/apps/web/node_modules
-/packages/renderer/node_modules
-/apps/web/dist
-/apps/server/dist
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+Thumbs.db
+
+# Build outputs
+apps/web/dist/
+apps/server/dist/
+packages/renderer/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+*.tmp

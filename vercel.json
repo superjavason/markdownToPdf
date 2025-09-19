@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm build",
+  "outputDirectory": "apps/web/dist",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "functions": {
+    "apps/server/api/preview.js": {
+      "runtime": "nodejs20.x"
+    },
+    "apps/server/api/pdf.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/preview",
+      "dest": "/apps/server/api/preview.js"
+    },
+    {
+      "src": "/api/pdf",
+      "dest": "/apps/server/api/pdf.js"
+    },
+    {
+      "src": "/docs",
+      "dest": "/apps/server/api/docs.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/apps/web/dist/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

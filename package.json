@@ -8,7 +8,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "pnpm -C packages/renderer build && pnpm -C apps/web build",
     "dev": "pnpm -r --stream dev",
     "lint": "echo 'no linter configured'",
     "start": "pnpm -C apps/server start",
@@ -22,5 +22,9 @@
   "devDependencies": {
     "@types/node": "24.5.2",
     "concurrently": "8.2.2"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "131.0.0",
+    "puppeteer-core": "24.22.0"
   }
 }
