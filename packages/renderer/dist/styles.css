@@ -1,0 +1,10 @@
+.markdown-body { box-sizing: border-box; min-width: 200px; max-width: 900px; margin: 0 auto; padding: 24px; }
+@media print {
+  .no-print { display: none !important; }
+  .markdown-body { box-shadow: none; }
+  pre, blockquote, table { break-inside: avoid; page-break-inside: avoid; }
+}
+.markdown-body input[type="checkbox"] { margin-right: 0.5em; }
+.markdown-body .mermaid { display: block; margin: 1rem auto; }
+
+

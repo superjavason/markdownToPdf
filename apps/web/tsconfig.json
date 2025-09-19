@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@md2pdf/renderer": ["../../packages/renderer/src"]
+    }
+  },
+  "include": ["src"]
+}
+
+

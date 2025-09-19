@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: md2pdf Service API
+  version: 0.1.0
+  description: API for rendering Markdown to HTML preview and exporting to PDF.
+servers:
+  - url: http://localhost:3030
+paths:
+  /api/preview:
+    post:
+      summary: Render Markdown to HTML
+      operationId: renderPreview
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [markdown]
+              properties:
+                markdown:
+                  type: string
+                  description: Raw Markdown content
+                options:
+                  type: object
+                  description: Rendering options
+      responses:
+        '200':
+          description: HTML result and assets
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  html:
+                    type: string
+                  assets:
+                    type: object
+                    properties:
+                      cssHrefs:
+                        type: array
+                        items: { type: string }
+                      inlineCss:
+                        type: array
+                        items: { type: string }
+                      jsModules:
+                        type: array
+                        items: { type: string }
+  /api/pdf:
+    post:
+      summary: Render Markdown to PDF
+      operationId: renderPdf
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [markdown]
+              properties:
+                markdown:
+                  type: string
+                options:
+                  type: object
+                  description: Rendering options
+      responses:
+        '200':
+          description: PDF file
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+components: {}

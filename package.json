@@ -1,0 +1,26 @@
+{
+  "name": "markdown-to-pdf-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Workspace for markdown preview and PDF export (GFM/CommonMark/Typora/Obsidian)",
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --stream dev",
+    "lint": "echo 'no linter configured'",
+    "start": "pnpm -C apps/server start",
+    "dev:server": "pnpm -C apps/server dev",
+    "dev:web": "pnpm -C apps/web dev"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@types/node": "24.5.2",
+    "concurrently": "8.2.2"
+  }
+}
